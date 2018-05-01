@@ -1,10 +1,3 @@
-//
-//  AppDelegate.swift
-//  Calculator.CD1.Project
-//
-//  Created by Cntt05 on 12/29/17.
-//  Copyright © 2017 Cntt05. All rights reserved.
-//
 
 import UIKit
 
