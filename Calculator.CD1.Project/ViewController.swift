@@ -1,5 +1,3 @@
-
-
 import UIKit
 
 class ViewController: UIViewController {
@@ -52,33 +50,45 @@ class ViewController: UIViewController {
             label.text = stringWithMathematicalOperation
             pheptoan = 1
         }
+            //+/-
         else if label.text != "" && sender.tag == 23 && pheptoan == 1
         {
             
             label.text = String((Double(stringWithMathematicalOperation)!)*(-1.0))
             pheptoan = 0
         }
+            //tinh tan
         else if label.text != "" && sender.tag == 26 && pheptoan == 1
         {
-            label.text = String(tan((Double.pi*(Double(stringWithMathematicalOperation)!))/180))
-            pheptoan = 0
+            if ((Double(stringWithMathematicalOperation)!) == 90 )
+            {
+                label.text = "Error"
+            }
+            else
+            {
+                label.text = String(tan((Double.pi*(Double(stringWithMathematicalOperation)!))/180))
+                pheptoan = 0
+             }
+            
         }
+            //tinh cos
         else if label.text != "" && sender.tag == 25 && pheptoan == 1
         {
             if ((Double(stringWithMathematicalOperation)!) == 90 )
             {
                 label.text = String(0)
                 pheptoan = 0
-                
+           
             }
             else
-                {
-                label.text = String(cos((Double.pi*(Double(stringWithMathematicalOperation)!))/180))
+            {
+               label.text = String(cos((Double.pi*(Double(stringWithMathematicalOperation)!))/180))
                 pheptoan = 0
                 
             }
             
         }
+            //tinh sin
         else if label.text != "" && sender.tag == 24 && pheptoan == 1
         {
            
@@ -90,7 +100,8 @@ class ViewController: UIViewController {
         {
             label.text = String(pow((Double(stringWithMathematicalOperation)!), 2.0))
             pheptoan = 0
-        }        else if label.text != "" && sender.tag == 21 && pheptoan == 1
+        }
+        else if label.text != "" && sender.tag == 21 && pheptoan == 1
         {
             label.text = String(log10(Double(stringWithMathematicalOperation)!))
             pheptoan = 0
