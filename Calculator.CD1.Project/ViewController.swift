@@ -32,7 +32,16 @@ class ViewController: UIViewController {
             stringWithMathematicalOperation = ""
             label.text = String (result)
         }
-        
+        else if sender.tag == 17 && phepdem == 1 && pheptoan == 1 && label.text != ""
+        {
+            
+            label.text = "Error"
+        }
+        else if sender.tag == 17 && phepdem == -1 && pheptoan == 1 && label.text != ""
+        {
+            
+            label.text = "Error"
+        }
     }
 //button->tag
 //0->1.    3->4.     6->7.      9->10
